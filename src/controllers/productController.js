@@ -22,11 +22,11 @@ class ProductController {
                 uploadStream.end(req.file.buffer);
             });
 
-            const { name, description, category, subcategory, subName } = req.body;
+            const { name, description, category, subcategory, brandName } = req.body;
             
             const product = await Product.create({
                 name,
-                subName,
+                brandName,
                 description,
                 image: result.secure_url,
                 category,

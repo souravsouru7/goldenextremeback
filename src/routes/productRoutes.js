@@ -2,7 +2,11 @@ const express = require('express');
 const productController = require('../controllers/productController');
 const auth = require('../middleware/auth');
 const multer = require('multer');
-const upload = multer({ storage: multer.memoryStorage() });
+
+// Configure multer without size limits
+const upload = multer({ 
+    storage: multer.memoryStorage()
+});
 
 const router = express.Router();
 

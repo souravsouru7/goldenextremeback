@@ -6,7 +6,7 @@ const productSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    subName: {
+    brandName: {
         type: String,
         required: true,
         trim: true
