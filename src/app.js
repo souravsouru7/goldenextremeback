@@ -11,7 +11,7 @@ const app = express();
 
 // CORS middleware
 app.use(cors({
-    origin: true, // Allow all origins for testing
+    origin: ['https://www.goldenextreme.com', 'https://goldenextreme.com'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'Cache-Control'],
