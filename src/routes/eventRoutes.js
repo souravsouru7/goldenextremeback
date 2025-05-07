@@ -15,8 +15,8 @@ router.get('/', eventController.getEvents);
 router.get('/:id', eventController.getEventById);
 
 // Protected routes (auth required)
-router.post('/', auth, upload.array('media', 10), eventController.createEvent);
-router.put('/:id', auth, upload.array('media', 10), eventController.updateEvent);
+router.post('/', auth, upload.single('image'), eventController.createEvent);
+router.put('/:id', auth, upload.single('image'), eventController.updateEvent);
 router.delete('/:id', auth, eventController.deleteEvent);
 
 module.exports = router; 

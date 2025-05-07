@@ -36,10 +36,10 @@ const eventSchema = new mongoose.Schema({
         required: true,
         trim: true
     },
-    media: [{
-        type: String,  // URLs to images/videos stored in Cloudinary
+    image: {
+        type: String,
         required: true
-    }],
+    },
     createdBy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Admin',
